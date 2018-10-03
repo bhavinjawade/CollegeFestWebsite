@@ -1,0 +1,856 @@
+<html style="height:100%;">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Montserrat|Muli|Raleway|Righteous" rel="stylesheet">
+    <style>
+        .h-100 {
+            height: 100% !important;
+        }
+
+        .main-event-story {
+            height: 100%;
+            padding: 0%;
+            border: solid rgba(54, 54, 56, 0.6) 7px;
+        }
+
+
+        .title {
+            font-size: 48px;
+            color: white;
+            position: absolute;
+            top: 6%;
+            left: 5%;
+            font-family: Montserrat;
+        }
+
+        .discription {
+            font-size: 19px;
+            color: white;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+            text-align: justify;
+            padding: 3%;
+            padding-right: 6%;
+            padding-top: 10%;
+            line-height: 28px;
+            font-family: Muli;
+        }
+
+        .thumbnail {
+            width: 100px;
+            height: 100px;
+            border-radius: 75px;
+        }
+
+        .thumb-holder {
+            font-family: Righteous;
+            height: 10%;
+            border-bottom: none;
+            border-top: none;
+            padding: 9%;
+            background-color: rgba(36, 25, 106, 0.1);
+            border-right: none;
+            transition: 0.3s;
+            padding-top: 11%;
+        }
+
+        .thumb-holder:hover {
+            background-color: rgba(0, 114, 255, 0.2);
+            background: linear-gradient(-50deg, rgba(255, 0, 0, 0.62), rgba(255, 255, 0, 0.53));
+            cursor: pointer;
+            transform: scale(1.2, 1.2);
+            opacity: 1 !important;
+            border-radius: 5px;
+            font-weight: 600 !important;
+            /*border-top-left-radius: 51px;
+            border-bottom-left-radius: 51px;
+            /*border: solid white 2px;*/
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        html {}
+
+        .gradback {
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            padding: 0px;
+        }
+
+        .opac-color {
+            position: absolute;
+            background-color: #242424;
+            width: 100%;
+            height: 100%;
+            opacity: 0.6;
+        }
+
+        .event-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0px
+        }
+
+        body {
+            background: url("images/backgevent.png");
+        }
+
+        .text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 14px;
+            height: 14px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            height: 6px;
+            border: 4px solid rgba(0, 0, 0, 0);
+            background-clip: padding-box;
+            -webkit-border-radius: 7px;
+            background-color: rgba(0, 0, 0, .5);
+            -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+        }
+
+        ::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+
+        ::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }
+
+        .list-icon {
+            padding: 0px;
+            margin: 0% !important;
+            font-size: 24px;
+            float: left;
+            margin-right: 5px !important;
+        }
+
+        .event-name {
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 19px;
+        }
+
+        .event-holder {
+            box-shadow: 0px 2px 25px #010313;
+        }
+
+        .fa {
+            margin-bottom: 24% !important;
+        }
+
+        .icon-holder {
+            color: white;
+            font-size: 32px;
+            padding: 10%;
+            padding-top: 25%;
+        }
+
+        #sideopener {
+            margin-top: 100px;
+            margin-left: 0px;
+            width: 22%;
+        }
+
+        html {
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .material-btn {
+            border: none;
+            outline: none !important;
+            background-color: transparent;
+            border-radius: 0;
+            color: white;
+            font-size: 19px;
+            border: solid white;
+            font-family: arial;
+            padding: 1% !important;
+        }
+
+        .material-btn:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .p-0 {
+            padding: 0;
+        }
+
+        .event {
+            display: none;
+            opacity: 0;
+            transition: 2s;
+        }
+
+        .contact {
+            font-family: Roboto;
+            font-weight: 100 !important;
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            font-size: 19px;
+            color: white;
+            font-weight: 600;
+            background-color: #94241a;
+            /* #3f3f3f;*/
+            background: linear-gradient(90deg, #94241a, rgba(32, 39, 131, 0.59));
+            padding: 1%;
+            z-index: 10;
+        }
+
+        .arrow {
+            width: 50px;
+            height: 25px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .arrow:hover {
+            transform: scale(1.2, 1.2);
+        }
+
+        /* ---- reset ---- */
+
+        /* ---- reset ---- */
+
+        body {
+            margin: 0;
+            font: normal 75% Arial, Helvetica, sans-serif;
+        }
+
+        canvas {
+            display: block;
+            vertical-align: bottom;
+        }
+
+        /* ---- particles.js container ---- */
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+        /* ---- stats.js ---- */
+
+        .count-particles {
+            background: #000022;
+            position: absolute;
+            top: 48px;
+            left: 0;
+            width: 80px;
+            color: #13E8E9;
+            font-size: .8em;
+            text-align: left;
+            text-indent: 4px;
+            line-height: 14px;
+            padding-bottom: 2px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .js-count-particles {
+            font-size: 1.1em;
+        }
+
+        #stats,
+        .count-particles {
+            -webkit-user-select: none;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+        #stats {
+            border-radius: 3px 3px 0 0;
+            overflow: hidden;
+        }
+
+        .count-particles {
+            border-radius: 0 0 3px 3px;
+        }
+
+        .clubname {
+            font-size: 21px;
+            color: white;
+            position: absolute;
+            top: 19%;
+            left: 44px;
+            /* font-family: montessarate; */
+            font-family: Montserrat;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+        .rightbar{
+            overflow-y:scroll;
+        }
+    </style>
+</head>
+
+<body class="h-100">
+
+    <div id="particles-js"></div>
+
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-md-1 h-100">
+                <div id="icon-holder" class="icon-holder">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <br>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <br>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <br>
+                </div>
+                <span id="sideopener" class="hvr-bounce-out sideopener" style="font-size:30px;cursor:pointer" onclick="openNav()">
+                    <img id="sideopener" src="images/sideopener.png" />
+                </span>
+            </div>
+            <div class="col-md-9 h-100">
+                <div class="row" style="height: 10%;padding-top: 2%;">
+                    <center style="width:100%;">
+                        <img onclick="decrement();" class="arrow" src="images/upperarrow.png" />
+                    </center>
+                </div>
+                <div id="event_1" class="row event" style="height: 75%;padding:2%;">
+                    <center style="width:100%;">
+                        <div class="col-md-10 main-event-story" style="height:100%;">
+                            <img class="event-image" src="images/counterstrike.jpg">
+                            <div class="opac-color"></div>
+                            <img class="gradback" src="images/gradback.png">
+                            <div class="text">
+                                <span class="title">Koot & Shoot</span>
+                                <br>
+                                <span class="clubname">Antaragini</span>
+                                <p class="discription">
+                                    The event name is SHOOT&KOOT. Gs ki vines is a short film 
+                                    making event in which we displayed the vines made by students 
+                                    on current and prevelent topics . <br><br> Virtual City is a budget 
+                                    event in which contestants will be given a fixed amount of 
+                                    virtual cash through which they can buy different cities 
+                                    which are divided on the basis of literacy rate and swach 
+                                    Bharat Abhiyan.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-10 w-100 p-0" style="display:inline-block;">
+                            <button class="btn material-btn" style="float:right;margin: 10px;margin-right: 0px;">Facebook Page</button>
+                            <button class="btn material-btn" style="float:right;margin: 10px;margin-right: 10px;">Register for Event</button>
+                        </div>
+                    </center>
+                </div>
+
+                <div id="event_2" class="row event" style="height: 75%;padding:2%;">
+                    <center style="width:100%;">
+                        <div class="col-md-10 main-event-story" style="height:100%;">
+                            <img class="event-image" src="images/333.png">
+                            <div class="opac-color"></div>
+                            <img class="gradback" src="images/gradback.png">
+                            <div class="text">
+                                <span class="title">SGSITS Robotics Club</span>
+                                <br>
+                                <span class="clubname">Robothon</span>
+                                <p class="discription">Robothon is a 2 day event consisting of two events. 
+                                    <br>Saarthi: The Roborace 
+                                    <br>Chakravyuh: Line Follower Competition.
+                                        
+                                    <br> 1. Vise Clutch
+                                    <br> 2. MeshMerize
+                                    <br> 3. Enigma Hyderabad : 24th September | Guru Nanak Institutions Technical Campus Jaipur:
+                                    2nd October | Swami Keshvanand Institute of Technology Mumbai : 24th September | IIT
+                                    Bombay It consists of:
+                                    <br> 1. Vise Clutch
+                                    <br> 2. MeshMerize
+                                    <br> 3. Enigma
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-10 w-100 p-0" style="display:inline-block;">
+                            <a href = "http://www.instagram.com/sgsits.roboticsclub"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 0px;">Instagram Page</button></a>
+                            <a href ="https://goo.gl/jpQA9p"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 10px;">Register for Event</button></a>
+                        </div>
+                    </center>
+                </div>
+
+                <div id="event_3" class="row event" style="height: 75%;padding:2%;">
+                    <center style="width:100%;">
+                        <div class="col-md-10 main-event-story" style="height:100%;">
+                            <img class="event-image" src="images/ppl.jpg">
+                            <div class="opac-color"></div>
+                            <img class="gradback" src="images/gradback.png">
+                            <div class="contact">
+                                <span>Contact:</span>
+                                <span>Bhavin Jawade: 9630494120</span>
+                                <span>Nirali Mehta: 9616564465</span>
+                            </div>
+                            <div class="text">
+                                <span class="title">Roobaroo 3.0 - Talent in you
+                                    </span>
+                                <br>
+                                <span class="clubname">Club Kshitij</span>
+                                <p class="discription">
+                                        
+                                        Club Kshitij is back with its flagship event, Roobaroo. 
+                                        
+                                        A talent hunt competition where you can show your talents such as dance, music, stage play, speed painting etc.
+                                        
+                                        <br>Registrations open from Monday, 19th February. 
+                                        
+                                        <br>Come join us in the most entertaining event in AAYAM 2k18.
+                                        
+                                        <br>An opportunity to show the world your mettle. 
+                                        
+                                        <br>An opportunity to express yourself.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-10 w-100 p-0" style="display:inline-block;">
+                            <a href = "http://www.facebook.com/kshitij.sgsits/"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 0px;">Facebook Page</button></a>
+                            <a href = "http://www.instagram.com/club_kshitij"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 10px;">Register for Event</button></a>
+                        </div>
+                    </center>
+                </div>
+
+                <div id="event_4" class="row event" style="height: 75%;padding:2%;">
+                        <center style="width:100%;">
+                            <div class="col-md-10 main-event-story" style="height:100%;">
+                                <img class="event-image" src="images/ppl.jpg">
+                                <div class="opac-color"></div>
+                                <img class="gradback" src="images/gradback.png">
+                                <div class="contact">
+                                    <span>Contact:</span>
+                                    <span>Bhavin Jawade: 9630494120</span>
+                                    <span>Nirali Mehta: 9616564465</span>
+                                </div>
+                                <div class="text">
+                                    <span class="title">Trinity Breakout</span><br>
+                                    <span class="clubname">Daksh club</span>
+                                    <p class="discription">
+                                            Event name-Trinity breakout
+                                            Consisting 3 level  game challenges
+                                            <br> 1. treasure hunt
+                                            <br> 2. hunger pangs
+                                            <br> 3. ad mad show
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-10 w-100 p-0" style="display:inline-block;">
+                                <a href = "https://www.facebook.com/CLUB-DAKSH-419537735056093/"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 0px;">Facebook Page</button></a>
+                                <a href = "https://www.instagram.com/p/BfREhr3Arle/"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 10px;">Instagram Page</button></a>
+                            </div>
+                        </center>
+                    </div>
+
+                    <div id="event_5" class="row event" style="height: 75%;padding:2%;">
+                            <center style="width:100%;">
+                                <div class="col-md-10 main-event-story" style="height:100%;">
+                                    <img class="event-image" src="images/ppl.jpg">
+                                    <div class="opac-color"></div>
+                                    <img class="gradback" src="images/gradback.png">
+                                    <div class="contact">
+                                        <span>Contact:</span>
+                                        <span>Bhavin Jawade: 9630494120</span>
+                                        <span>Nirali Mehta: 9616564465</span>
+                                    </div>
+                                    <div class="text">
+                                        <span class="title">SCAM 2.0</span><br>
+                                        <span class="clubname">Entrepreneurship Cell</span>
+                                        <p class="discription">
+                                                This event is designed to complement the innovative 
+                                                ideas, analytical skills and problem solving ability 
+                                                of the candidates.The event also aims to help 
+                                                candidates identify various obstacles and pressures 
+                                                that creates hurdles in the path of building a 
+                                                company , and to reflect on ways to avoid those.
+                                                
+                                                <br><br>
+
+                                                It would basically  be a ground event which will be a 
+                                                kind of corporate commotion in which students will be 
+                                                divided in teams and each team would have some 
+                                                dealers and some entrepreneurs who will aim to 
+                                                establish their companies with the help of provided 
+                                                commodities and services by negotiating, selling and 
+                                                investing amongst each other. The team with the 
+                                                largest capital value at the end of the game would 
+                                                be declared as the winners.
+                                                
+                                                
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-10 w-100 p-0" style="display:inline-block;">
+                                    <a href = "https://www.facebook.com/CLUB-DAKSH-419537735056093/"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 0px;">Facebook Page</button></a>
+                                    <a href = "https://www.instagram.com/p/BfREhr3Arle/"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 10px;">Instagram Page</button></a>
+                                </div>
+                            </center>
+                        </div>
+
+                        <div id="event_6" class="row event" style="height: 75%;padding:2%;">
+                                <center style="width:100%;">
+                                    <div class="col-md-10 main-event-story" style="height:100%;">
+                                        <img class="event-image" src="images/ppl.jpg">
+                                        <div class="opac-color"></div>
+                                        <img class="gradback" src="images/gradback.png">
+                                        <div class="contact">
+                                            <span>Contact:</span>
+                                            <span>Bhavin Jawade: 9630494120</span>
+                                            <span>Nirali Mehta: 9616564465</span>
+                                        </div>
+                                        <div class="text">
+                                            <span class="title">LAKSHYA
+                                                </span><br>
+                                            <span class="clubname">NCC SGSITS INDORE
+                                                </span>
+                                            <p class="discription">
+                                                    Lakshya is a shooting competition. It will include test of 
+                                                    proficiency (accuracy and concentration) using guns. The event 
+                                                    will be conducted under the national rifle association, New 
+                                                    Delhi.
+ 
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10 w-100 p-0" style="display:inline-block;">
+                                        <a href = "https://m.facebook.com/NCC8SGSITS/"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 0px;">Facebook Page</button></a>
+                                        <a href = "https://www.instagram.com/nccsgsits/"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 10px;">Instagram Page</button></a>
+                                    </div>
+                                </center>
+                            </div>
+
+                            <div id="event_7" class="row event" style="height: 75%;padding:2%;">
+                                    <center style="width:100%;">
+                                        <div class="col-md-10 main-event-story" style="height:100%;">
+                                            <img class="event-image" src="images/ppl.jpg">
+                                            <div class="opac-color"></div>
+                                            <img class="gradback" src="images/gradback.png">
+                                            <div class="contact">
+                                                <span>Contact:</span>
+                                                <span>Bhavin Jawade: 9630494120</span>
+                                                <span>Nirali Mehta: 9616564465</span>
+                                            </div>
+                                            <div class="text">
+                                                <span class="title">RAN-BHOOMI</span><br>
+                                                <span class="clubname">Physical Education & Sports Dept.</span>
+                                                <p class="discription">
+                                                        It is a paintball war competition,consists of series 
+                                                        matches. In each match there will be 2 teams and in 
+                                                        each team will have 5 members with their capitals. 
+                                                        Team members were provided dummy guns and paint bullets 
+                                                        with real dummy war field. <br> Team who capture capital 
+                                                        of other team won the match and was promoted to the next phase.
+                                                        The most fascinating and attracting army dress up 
+                                                        will be provided. It will be army combat dress with 
+                                                        helmet and gloves.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10 w-100 p-0" style="display:inline-block;">
+                                            <a href = "https://m.facebook.com/NCC8SGSITS/"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 0px;">Facebook Page</button></a>
+                                            <a href = "https://tinyurl.com/ncc-sgsits-2018"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 10px;">Register For Event</button></a>
+                                        </div>
+                                    </center>
+                                </div>
+
+                                <div id="event_8" class="row event" style="height: 75%;padding:2%;">
+                                        <center style="width:100%;">
+                                            <div class="col-md-10 main-event-story" style="height:100%;">
+                                                <img class="event-image" src="images/ppl.jpg">
+                                                <div class="opac-color"></div>
+                                                <img class="gradback" src="images/gradback.png">
+                                                <div class="contact">
+                                                    <span>Contact:</span>
+                                                    <span>Bhavin Jawade: 9630494120</span>
+                                                    <span>Nirali Mehta: 9616564465</span>
+                                                </div>
+                                                <div class="text">
+                                                    <span class="title">Mr. And Miss Aayam 2018</span><br>
+                                                    <span class="clubname">Club Ojaswa</span>
+                                                    <p class="discription">
+                                                            Mr. And Miss. Aayam 2k18 comprises of 3 rounds. First round is 
+                                                            treasure hunt in which the teams will find clues 
+                                                            hidden in the capmus premises to find the treasure. 
+                                                            Second round is Show your Popularity in which the 
+                                                            teams will be segregated and each individual will 
+                                                            post his/her picture on the facebook page of our 
+                                                            event and collect maximum likes possible.<br> Third 
+                                                            round is the stage round where the qualified participants 
+                                                            will come on the stage and an extempore will be 
+                                                            conducted. After which the judges will ask them 
+                                                            some questions to judge their personality, on the 
+                                                            basis of which Mr. And Miss Aayam will be announced. 
+                                                            
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10 w-100 p-0" style="display:inline-block;">
+                                                <a href = "https://m.facebook.com/club.ojaswa.sgsits/?tsid=0.48587958546661536&source=result"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 0px;">Facebook Page</button></a>
+                                                <a href = "https://www.instagram.com/clubojaswa/"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 10px;">Instagram Page</button></a>
+                                            </div>
+                                        </center>
+                                    </div>
+                                    <div id="event_9" class="row event" style="height: 75%; padding: 2%;">
+                                            <center style="width:100%;">
+                                                <div class="col-md-10 main-event-story" style="height:100%;">
+                                                    <img class="event-image" src="images/trivim.jpg">
+                                                    <div class="opac-color"></div>
+                                                    <img class="gradback" src="images/gradback.png">
+                                                    <div class="text">
+                                                        <span class="title">CRANE-CRAFT</span>
+                                                        <br>
+                                                        <span class="clubname">CLUB TRIVIM  </span>
+                                                        <p class="discription">
+                                                            This competition involves with the construction of 
+                                                            a model of tower crane using the popsicle sticks, 
+                                                            and the models will be judged on the basis on 
+                                                            dimensions &amp; weight criteria.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10 w-100 p-0" style="display:inline-block;">
+                                                        <a href="https://www.facebook.com/clubtrivim"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 0px;">Facebook Page</button></a>
+                                                        <a href="https://www.instagram.com/club_trivim"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 10px;">Instagram Page</button></a>
+                                                </div>
+                                            </center>
+                                        </div> 
+                                    
+                                        <div id="event_10" class="row event" style="height: 75%; padding: 2%;">
+                                                <center style="width:100%;">
+                                                    <div class="col-md-10 main-event-story" style="height:100%;">
+                                                        <img class="event-image" src="images/kavya.jpg">
+                                                        <div class="opac-color"></div>
+                                                        <img class="gradback" src="images/gradback.png">
+                                                        <div class="text">
+                                                            <span class="title">Kavyanjali</span>
+                                                            <br>
+                                                            <span class="clubname">Ingenious</span>
+                                                            <p class="discription">
+                                                                    "Hindi, our mother tongue, the very inception of this bilingual persona that we boast about,
+                                                                     undoubtedly is entrenched in crevices of our hearts we may choose to ignore sometimes. 
+                                                                     It has immutable nuances when expressed in words not of Western influenced conformists 
+                                                                     but of the inner child that still cries ""Maa"", not ""Mother"" when in grief.
+                                                                    Kavyanjali, hence, can only be described in the language it proudly serves...<br>
+                            
+                                                                </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-10 w-100 p-0" style="display:inline-block;">
+                                                            <a href="https://www.facebook.com/ingenious.sgsits/"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 0px;">Facebook Page</button></a>
+                                                            <a href="https://www.instagram.com/ingenious_sgsits/"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 10px;">Instagram Page</button></a>
+                                                    </div>
+                                                </center>
+                                            </div>
+
+                                            <div id="event_11" class="row event" style="height: 75%; padding: 2%;">
+                                                    <center style="width:100%;">
+                                                        <div class="col-md-10 main-event-story" style="height:100%;">
+                                                            <img class="event-image" src="images/kavya.jpg">
+                                                            <div class="opac-color"></div>
+                                                            <img class="gradback" src="images/gradback.png">
+                                                            <div class="text">
+                                                                <span class="title">Kavyanjali</span>
+                                                                <br>
+                                                                <span class="clubname">Ingenious</span>
+                                                                <p class="discription">
+                                                                        "Hindi, our mother tongue, the very inception of this bilingual persona that we boast about,
+                                                                         undoubtedly is entrenched in crevices of our hearts we may choose to ignore sometimes. 
+                                                                         It has immutable nuances when expressed in words not of Western influenced conformists 
+                                                                         but of the inner child that still cries ""Maa"", not ""Mother"" when in grief.
+                                                                        Kavyanjali, hence, can only be described in the language it proudly serves...<br>
+                                
+                                                                    </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-10 w-100 p-0" style="display:inline-block;">
+                                                                <a href="https://www.facebook.com/ingenious.sgsits/"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 0px;">Facebook Page</button></a>
+                                                                <a href="https://www.instagram.com/ingenious_sgsits/"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 10px;">Instagram Page</button></a>
+                                                        </div>
+                                                    </center>
+                                                </div>
+
+                                                <div id="event_10" class="row event" style="height: 75%; padding: 2%;">
+                                                        <center style="width:100%;">
+                                                            <div class="col-md-10 main-event-story" style="height:100%;">
+                                                                <img class="event-image" src="images/kavya.jpg">
+                                                                <div class="opac-color"></div>
+                                                                <img class="gradback" src="images/gradback.png">
+                                                                <div class="text">
+                                                                    <span class="title">Kavyanjali</span>
+                                                                    <br>
+                                                                    <span class="clubname">Ingenious</span>
+                                                                    <p class="discription">
+                                                                            "Hindi, our mother tongue, the very inception of this bilingual persona that we boast about,
+                                                                             undoubtedly is entrenched in crevices of our hearts we may choose to ignore sometimes. 
+                                                                             It has immutable nuances when expressed in words not of Western influenced conformists 
+                                                                             but of the inner child that still cries ""Maa"", not ""Mother"" when in grief.
+                                                                            Kavyanjali, hence, can only be described in the language it proudly serves...<br>
+                                    
+                                                                        </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-10 w-100 p-0" style="display:inline-block;">
+                                                                    <a href="https://www.facebook.com/ingenious.sgsits/"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 0px;">Facebook Page</button></a>
+                                                                    <a href="https://www.instagram.com/ingenious_sgsits/"><button class="btn material-btn" style="float:right;margin: 10px;margin-right: 10px;">Instagram Page</button></a>
+                                                            </div>
+                                                        </center>
+                                                    </div>
+
+                <div class="row" style="height: 12.5%;padding-top:5%;">
+                    <center style="width:100%;">
+                        <img onclick="increment();" class="arrow" src="images/downarrow.png" />
+                    </center>
+                </div>
+            </div>
+            <div class="col-md-2 h-100 event-holder">
+                <div class="row thumb-holder" style="height:10%">
+                    <span id="1" class="event-name" onclick="changeevent(this);">
+                        <i class="fa fa-gamepad list-icon"></i>Koot and Shoot</span>
+                    <!--fa-gamepad-->
+                </div>
+                <div class="row thumb-holder" style="height:10%">
+                    <span id="2" class="event-name list-icon list-icon" onclick="changeevent(this);">
+                        <i class="fa fa-gamepad list-icon"></i>Robothon</span>
+                </div>
+                <div class="row thumb-holder" style="height:10%">
+                    <span id="3" class="event-name list-icon" onclick="changeevent(this);">
+                        <i class="fa fa-trophy list-icon"></i>Roobaroo</span>
+                </div>
+                <div class="row thumb-holder" style="height:10%">
+                    <span id="4" class="event-name list-icon" onclick="changeevent(this);">Trinity Breakout</span>
+                </div>
+                <div class="row thumb-holder" style="height:10%">
+                    <span id="5" class="event-name list-icon" onclick="changeevent(this);">SCAM</span>
+                </div>
+
+                <div class="row thumb-holder" style="height:10%">
+                    <span id="6" class="event-name list-icon" onclick="changeevent(this);">Lakshya</span>
+                </div>
+                <div class="row thumb-holder" style="height:10%">
+                    <span id="7" class="event-name list-icon" onclick="changeevent(this);">Ran-Bhoomi</span>
+                </div>
+                <div class="row thumb-holder" style="height:10%">
+                    <span id="8" class="event-name list-icon" onclick="changeevent(this);">Mr.And Miss Aayaam</span>
+                </div>
+                <div class="row thumb-holder" style="height:10%">
+                    <span id="9" class="event-name list-icon" onclick="changeevent(this);">Crane-Craft</span>
+                </div>
+                <div class="row thumb-holder" style="height:10%">
+                    <span id="10" class="event-name list-icon" onclick="changeevent(this);">Kavyanjali</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- stats.js lib -->
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script>
+
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var c = url.searchParams.get("c");
+        
+        console.log(c);
+
+        var max = 4;
+        var min = 1;
+        var id = "event_1";
+        
+        var id = "event_" + c; 
+
+        var selectedevent = document.getElementById(id);
+        selectedevent.style.display = "block";
+        selectedevent.style.opacity = "1";
+        selectno = 1;
+
+        function changeevent(elem) {
+            console.log("currently on screen>> " + selectedevent.id);
+            eventid = elem.id;
+            event = document.getElementById("event_" + eventid);
+            selectedevent.style.opacity = "0";
+            selectedevent.style.display = "none";
+            event.style.display = "block";
+            event.style.opacity = "1";
+            selectedevent = event;
+            selectno = elem.id;
+            console.log("To be displayed>> " + event.id);
+        }
+        function increment() {
+            console.log("currently on screen>> " + selectedevent.id);
+            eventid = selectno + 1;
+            selectno = selectno + 1;
+            if (eventid > max) { eventid = min; selectno = min; }
+            event = document.getElementById("event_" + eventid);
+            selectedevent.style.opacity = "0";
+            selectedevent.style.display = "none";
+            event.style.display = "block";
+            event.style.opacity = "1";
+            selectedevent = event;
+            console.log("To be displayed>> " + event.id);
+        }
+        function decrement() {
+            console.log("currently on screen>> " + selectno);
+            eventid = selectno - 1;
+            selectno = selectno - 1;
+            if (eventid < min) { eventid = max; selectno = max; }
+            event = document.getElementById("event_" + eventid);
+            selectedevent.style.opacity = "0";
+            selectedevent.style.display = "none";
+            event.style.display = "block";
+            event.style.opacity = "1";
+            selectedevent = event;
+            console.log("To be displayed>> " + eventid);
+        }
+    </script>
+    <script>
+        /* ---- particles.js config ---- */
+
+        particlesJS("particles-js", { "particles": { "number": { "value": 80, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#ffffff" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } }, "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 }, "move": { "enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true });
+
+/* ---- stats.js config ---- */
+    </script>
+
+
+</body>
+
+</html>
+
+<!-- Sourabh Nihore -->

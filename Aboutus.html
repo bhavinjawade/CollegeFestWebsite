@@ -1,0 +1,539 @@
+<html style="height:100%;">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Montserrat|Muli|Raleway|Righteous|Patua+One|ABeeZee" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/css3-animate-it/1.0.3/css/animations.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <style>
+        .h-100 {
+            height: 100% !important;
+        }
+
+        .main-event-story {
+            height: 100%;
+            padding: 0%;
+            border: solid rgba(54, 54, 56, 0.6) 7px;
+        }
+
+
+        .title {
+            text-align: center;
+            font-size: 35px;
+            color: white;
+            /* position: absolute; */
+            /* top: 6%; */
+            /* left: 5%; */
+            width: 100%;
+            font-family: Montserrat;
+        }
+
+        .aboutaym {
+            height: 10%;
+            padding: 1%;
+            padding-top: 3%;
+        }
+
+        .discription {
+            font-size: 19px;
+            color: white;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+            text-align: justify;
+            padding: 3%;
+            padding-right: 6%;
+            padding-top: 7%;
+            line-height: 28px;
+            font-family: Muli;
+        }
+
+        .thumbnail {
+            width: 100px;
+            height: 100px;
+            border-radius: 75px;
+        }
+
+        .thumb-holder {
+            font-family: Righteous;
+            height: 10%;
+            border-bottom: none;
+            border-top: none;
+            padding: 9%;
+            background-color: rgba(36, 25, 106, 0.1);
+            border-right: none;
+            transition: 0.3s;
+        }
+
+        .thumb-holder:hover {
+            background-color: rgba(0, 114, 255, 0.2);
+            background: linear-gradient(-50deg, rgba(255, 0, 0, 0.62), rgba(255, 255, 0, 0.53));
+            cursor: pointer;
+            transform: scale(1.2, 1.2);
+            opacity: 1 !important;
+            border-radius: 5px;
+            font-weight: 600 !important;
+            /*border-top-left-radius: 51px;
+            border-bottom-left-radius: 51px;
+            /*border: solid white 2px;*/
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        html {}
+
+        .gradback {
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            padding: 0px;
+        }
+
+        .opac-color {
+            background-color: #242424;
+            width: 100%;
+            height: 100%;
+            opacity: 0.6;
+        }
+
+        .some {
+
+            position: relative;
+        }
+
+        .event-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0px
+        }
+
+        body {}
+
+        .text {
+            font-family: raleway;
+            font-size: 34px;
+            padding: 5%;
+            font-family: Raleway;
+            border-right: solid #424242 3px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 14px;
+            height: 14px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            height: 6px;
+            border: 4px solid rgba(0, 0, 0, 0);
+            background-clip: padding-box;
+            -webkit-border-radius: 7px;
+            background-color: rgba(0, 0, 0, .5);
+            -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+        }
+
+        ::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+
+        ::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }
+
+        .list-icon {
+            padding: 0px;
+            margin: 0% !important;
+            font-size: 24px;
+            float: left;
+            margin-right: 5px !important;
+        }
+
+        .event-name {
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 23px;
+        }
+
+        .event-holder {
+            box-shadow: 0px 2px 25px #010313;
+        }
+
+        .fa {
+            margin-bottom: 24% !important;
+        }
+
+        .icon-holder {
+            color: white;
+            font-size: 32px;
+            padding: 10%;
+            padding-top: 25%;
+        }
+
+        #sideopener {
+            margin-top: 100px;
+            margin-left: 0px;
+            width: 22%;
+        }
+
+
+        .material-btn {
+            border: none;
+            outline: none !important;
+            background-color: transparent;
+            border-radius: 0;
+            color: white;
+            font-size: 19px;
+            border: solid white;
+            font-family: arial;
+        }
+
+        .material-btn:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .p-0 {
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            font: normal 75% Arial, Helvetica, sans-serif;
+        }
+
+        .m-0 {
+            margin: 0;
+        }
+
+        .quote {
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: justify;
+            width: 100%;
+            height: 100%;
+            color: white;
+            font-size: 23px;
+            padding: 45px;
+            padding-top: 36px;
+            background-color: rgba(12, 22, 113, 0.45);
+            /* border-radius: 8px; */
+            border: solid white 5px;
+            border-color: rgba(68, 68, 68, 0.35);
+            border: solid rgba(54, 54, 56, 0.6) 7px;
+            background-color: rgba(36, 25, 106, 0.1);
+            box-shadow: 0px 2px 25px #01031b;
+        }
+
+        .quotebox {
+            height: 40%;
+            padding: 5%;
+            padding-bottom: 1%;
+        }
+
+        .storybox {
+            padding: 5%;
+        }
+
+        .story {
+            height: 40%;
+            text-align: justify;
+            width: 100%;
+            height: auto;
+            color: white;
+            font-size: 16px;
+            background-color: rgba(12, 22, 113, 0.45);
+            border: solid white 5px;
+            border-color: rgba(68, 68, 68, 0.35);
+            border: solid rgba(54, 54, 56, 0.6) 7px;
+            background-color: rgba(36, 25, 106, 0.1);
+            box-shadow: 0px 2px 25px #01031b;
+            padding: 6%;
+            font-family: Montserrat;
+            margin-top: 3%;
+        }
+
+
+        .head {
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 6%;
+            width: 34%;
+            font-weight: bold;
+            font-family: ABeeZee;
+        }
+
+        .image2 {
+            width: 49%;
+            padding: 0;
+            display: inline-block;
+            margin: 0;
+            height: 42%;
+            padding: 0%;
+            border: solid white 5px;
+            margin: 0%;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            box-shadow: 0px 2px 25px black;
+        }
+
+        .img2class {
+            width: 100%;
+            height: 100%;
+        }
+
+        .image1 {
+            box-shadow: 0px 2px 25px black;
+            height: 68%;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            border: solid white 7px;
+        }
+
+        .para-frame {
+            padding: 3%;
+            background-color: #030416a3;
+            border-radius: 8px;
+            font-family: Muli;
+        }
+
+        body,
+        html,
+        .main {
+            height: 100%;
+        }
+
+        /* Grow */
+
+        .hvr-grow {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px transparent;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            z-index: 1;
+        }
+
+        .hvr-grow:hover,
+        .hvr-grow:focus,
+        .hvr-grow:active {
+            z-index: 100;
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        .img {
+            background-size: cover;
+        }
+
+        .holder {
+            position: absolute;
+            top: 30%;
+            width: 60%;
+            height: 40%;
+            background-color: rgba(255, 255, 255, 0.78) !important;
+            z-index: 1000;
+            left: 20%;
+        }
+
+        .box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 14%;
+            background-color: transparent;
+            z-index: 100;
+        }
+
+        .text {
+            font-family: raleway;
+            font-size: 34px;
+            padding: 5%;
+            font-family: Raleway;
+        }
+
+        body {
+            background: #ccc;
+        }
+
+        .main {
+            font-family: Arial;
+            width: 700px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        h3 {
+            background: #fff;
+            color: #3498db;
+            font-size: 36px;
+            line-height: 100px;
+            margin: 10px;
+            padding: 2%;
+            position: relative;
+            text-align: center;
+        }
+
+        .action {
+            display: block;
+            margin: 100px auto;
+            width: 100%;
+            text-align: center;
+        }
+
+        .action a {
+            display: inline-block;
+            padding: 5px 10px;
+            background: #f30;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .action a:hover {
+            background: #000;
+        }
+
+        .main{
+            position:absolute;
+            top:0;
+            left:0;
+        }
+
+    </style>
+</head>
+
+<body class="h-100" onload="setter();">
+
+    <div class="container-fluid h-100">
+
+        <div class="row" style="height:33.33%">
+            <div class="img hvr-grow col-md-2 p-0"></div>
+
+            <div class="img hvr-grow col-md-2 p-0"></div>
+
+            <div class="img hvr-grow col-md-2 p-0"></div>
+
+            <div class="img hvr-grow col-md-2 p-0"></div>
+
+            <div class="img hvr-grow col-md-2 p-0"></div>
+
+            <div class="img hvr-grow col-md-2 p-0"></div>
+        </div>
+        <div class="row" style="height:33.33%">
+            <div class="img hvr-grow col-md-2 p-0"></div>
+
+            <div class="img hvr-grow col-md-2 p-0"></div>
+
+            <div class="img hvr-grow col-md-2 p-0"></div>
+
+            <div class="img hvr-grow col-md-2 p-0"></div>
+
+            <div class="img hvr-grow col-md-2 p-0"></div>
+
+            <div class="img hvr-grow col-md-2 p-0"></div>
+        </div>
+        <div class="row" style="height:33.33%">
+            <div class="img hvr-grow col-md-2 p-0"></div>
+
+            <div class="img hvr-grow col-md-2 p-0"></div>
+
+            <div class="img hvr-grow col-md-2 p-0"></div>
+
+            <div class="img hvr-grow col-md-2 p-0"></div>
+
+            <div class="img hvr-grow col-md-2 p-0"></div>
+
+            <div class="img hvr-grow col-md-2 p-0"></div>
+        </div>
+
+        <div class="main">
+            <div class="slider slider-for">
+                <div class="holder">
+                    <p class="text">
+                        ike none other! Applications for Internshala Student Partner 9.0 are live! Win certificates, goodies, and financial rewards!
+                        The last date to apply - 25th February 2018. Hurry! Apply
+                    </p>
+                </div>
+                <div class="holder">
+                    <p class="text">
+                        ike none other! Applications for Internshala Student Partner 9.0 are live! Win certificates, goodies, and financial rewards!
+                        The last date to apply - 25th February 2018. Hurry! Apply
+                    </p>
+                </div>
+                <div class="holder">
+                    <p class="text">
+                        ike none other! Applications for Internshala Student Partner 9.0 are live! Win certificates, goodies, and financial rewards!
+                        The last date to apply - 25th February 2018. Hurry! Apply
+                    </p>
+                </div>
+                <div class="holder">
+                    <p class="text">
+                        ike none other! Applications for Internshala Student Partner 9.0 are live! Win certificates, goodies, and financial rewards!
+                        The last date to apply - 25th February 2018. Hurry! Apply
+                    </p>
+                </div>
+                <div class="holder">
+                    <p class="text">
+                        ike none other! Applications for Internshala Student Partner 9.0 are live! Win certificates, goodies, and financial rewards!
+                        The last date to apply - 25th February 2018. Hurry! Apply
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- stats.js lib -->
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/css3-animate-it/1.0.3/js/css3-animate-it.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script>
+        /*function setter() {
+            images = document.getElementsByClassName('img');
+            for (i = 0; i < 18; i++) {
+                images[i].style.backgroundImage = "url(images/aboutuspage/" + i + ".png)";
+            }
+        }*/
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            fade: true,
+        });
+    </script>
+
+
+</body>
+
+</html>
+
+<!-- Sourabh Nihore -->
