@@ -8,4 +8,4 @@ Official Website of Aayam Website 2018.
 
 <br>
 
-### Link to website: [http://bhavinjawade.me/aayaam2018/](http://bhavinjawade.me/aayaam2018/)
+### Link to website: [https://bhavinjawade.github.io/CollegeFestWebsite/](https://bhavinjawade.github.io/CollegeFestWebsite/)
